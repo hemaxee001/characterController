@@ -1,7 +1,6 @@
-using System.Collections;
-using Unity.Android.Gradle.Manifest;
+
 using UnityEngine;
-using UnityEngine.InputSystem.XR;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class characterMovement : MonoBehaviour
 {
@@ -39,8 +38,8 @@ public class characterMovement : MonoBehaviour
     //=======================================movement=========================================
     void  HandleMovement()
     {
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
+        float h = CrossPlatformInputManager.GetAxis("Horizontal");
+        float v = CrossPlatformInputManager.GetAxis("Vertical");
 
         Vector3 camForward = cameraTransform.forward;
         Vector3 camRight = cameraTransform.right;
